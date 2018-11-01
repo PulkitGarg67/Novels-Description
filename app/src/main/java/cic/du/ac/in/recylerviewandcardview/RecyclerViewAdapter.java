@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import cic.du.ac.in.recylerviewandcardview.Utils.Book;
@@ -40,7 +42,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         holder.tv_book_title.setText(mData.get(position).getTitle());
-        holder.img_book_thumbnail.setImageResource(mData.get(position).getThumbnail());
+        if(mData.get(position).getThumbnail().isEmpty()) {
+            Picasso.get().load("http://books.google.com/books/content?id=kQyM2L5U6ZkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api").into(holder.img_book_thumbnail);
+
+        }else{
+            Picasso.get().load(mData.get(position).getThumbnail()).into(holder.img_book_thumbnail);
+        }
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

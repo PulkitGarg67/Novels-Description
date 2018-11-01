@@ -7,16 +7,14 @@ package cic.du.ac.in.recylerviewandcardview.Utils;
 public class Book {
 
     private String Title;
-    private String Category ;
     private String Description ;
-    private int Thumbnail ;
+    private String Thumbnail ;
 
     public Book() {
     }
 
-    public Book(String title, String category, String description, int thumbnail) {
+    public Book(String title, String description, String thumbnail) {
         Title = title;
-        Category = category;
         Description = description;
         Thumbnail = thumbnail;
     }
@@ -26,15 +24,11 @@ public class Book {
         return Title;
     }
 
-    public String getCategory() {
-        return Category;
-    }
-
     public String getDescription() {
         return Description;
     }
 
-    public int getThumbnail() {
+    public String getThumbnail() {
         return Thumbnail;
     }
 
@@ -43,15 +37,11 @@ public class Book {
         Title = title;
     }
 
-    public void setCategory(String category) {
-        Category = category;
-    }
-
     public void setDescription(String description) {
         Description = description;
     }
 
-    public void setThumbnail(int thumbnail) {
+    public void setThumbnail(String thumbnail) {
         Thumbnail = thumbnail;
     }
 }

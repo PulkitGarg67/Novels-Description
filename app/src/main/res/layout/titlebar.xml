@@ -5,4 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
-    app:titleTextColor="#555759"></android.support.v7.widget.Toolbar>
+    app:titleTextColor="#555759"
+    android:layout_alignParentTop="true"></android.support.v7.widget.Toolbar>
