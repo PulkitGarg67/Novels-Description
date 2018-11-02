@@ -25,7 +25,6 @@ import java.util.List;
 
 public final class QueryUtils {
 
-    static String  test = "https://www.googleapis.com/books/v1/volumes?";
     private QueryUtils(){
     }
 
